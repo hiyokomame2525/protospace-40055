@@ -1,9 +1,5 @@
 <div class="card">
-<% if prototype && prototype.image.attached? %>
   <%= link_to image_tag(prototype.image, class: :card__img ), prototype_path(prototype) %>
-<% else %>
-  <%= image_tag "logo.png",class: :card__img %>
-<% end %>
   <div class="card__body">
     <%= link_to prototype.title, prototype_path(prototype), class: :card__title%>
     <p class="card__summary">

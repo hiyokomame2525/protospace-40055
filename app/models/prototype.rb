@@ -6,9 +6,5 @@ class Prototype < ApplicationRecord
   validates :title, presence: true
   validates :catch_copy, presence: true
   validates :concept, presence: true
-  validates :image, presence: true, unless: :was_attavhed?
-
-  def was_attavhed?
-    self.image.attached?
-  end
+  validates :image, presence: true
 end
